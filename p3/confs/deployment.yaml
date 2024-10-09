@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: redacted
+  name: ziloughm
   namespace: dev
   annotations:
     display-name: "*redacted*" 
@@ -9,14 +9,14 @@ spec:
   replicas: 1 
   selector: 
     matchLabels: 
-      app: redacted 
+      app: wil-playground
   template: 
     metadata: 
       labels: 
-        app: redacted 
+        app: wil-playground
     spec: 
       containers: 
-        - name: redacted
+        - name: wil-playground
           image: wil42/playground:v1 
           ports: 
             - containerPort: 8880
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1 
 kind: Service 
 metadata: 
-  name: redacted-service 
+  name: ziloughm-service 
   namespace: dev 
 spec: 
   selector: 
-    app: redacted 
+    app: ziloughm 
   ports: 
     - protocol: TCP 
       port: 8888
