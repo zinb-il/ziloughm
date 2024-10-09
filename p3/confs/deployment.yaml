@@ -1,10 +1,8 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: ziloughm
+  name: wil-playground
   namespace: dev
-  annotations:
-    display-name: "*redacted*" 
 spec: 
   replicas: 1 
   selector: 
@@ -30,6 +28,7 @@ metadata:
 spec: 
   selector: 
     app: wil-playground 
+  type: NodePort
   ports: 
     - protocol: TCP 
       port: 8888
