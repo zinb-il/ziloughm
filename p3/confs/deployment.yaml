@@ -15,7 +15,7 @@ spec:
     spec: 
       containers: 
         - name: wil-playground
-          image: wil42/playground:v2
+          image: wil42/playground:v1 
           ports: 
             - containerPort: 8888
 --- 
@@ -51,6 +51,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: wil-playground-server
+                name: wil-playground-service
                 port:
                   number: 8888
