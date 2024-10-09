@@ -29,7 +29,7 @@ metadata:
   namespace: dev 
 spec: 
   selector: 
-    app: ziloughm 
+    app: wil-playground 
   ports: 
     - protocol: TCP 
       port: 8888
