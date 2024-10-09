@@ -1,21 +1,23 @@
-apiVersion: apps/v1
+apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: wil-playground 
-  namespace: dev 
+  name: redacted
+  namespace: dev
+  annotations:
+    display-name: "*redacted*" 
 spec: 
   replicas: 1 
   selector: 
     matchLabels: 
-      app: wil-playground 
+      app: redacted 
   template: 
     metadata: 
       labels: 
-        app: wil-playground 
+        app: redacted 
     spec: 
       containers: 
-        - name: wil-playground 
-          image: wil42/playground:v2 
+        - name: redacted
+          image: wil42/playground:v1 
           ports: 
             - containerPort: 8880
 --- 
@@ -23,11 +25,11 @@ spec:
 apiVersion: v1 
 kind: Service 
 metadata: 
-  name: wil-playground-service 
+  name: redacted-service 
   namespace: dev 
 spec: 
   selector: 
-    app: wil-playground 
+    app: redacted 
   ports: 
     - protocol: TCP 
       port: 8888
